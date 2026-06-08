@@ -1,54 +1,5 @@
-#set page(paper: "us-letter", margin: (x: 0.5in, y: 0.25in))
-#set text(font: "Liberation Serif", size: 11pt, lang: "en")
-#set par(justify: false, leading: 0.65em)
-#set heading(numbering: none)
-
-#let field(label, width: 2in) = {
-  box(width: width, stroke: (bottom: 0.7pt), inset: (bottom: 3pt))[#label]
-}
-
-#let header(subject, subtitle: "20-Minute Multiple-Choice Quiz") = {
-  align(center)[
-    #text(size: 17pt, weight: "bold")[Porus Primary School]
-    #v(-.75em)
-    #text(size: 15pt, weight: "bold")[Grade 6 #subject]
-    #v(-0.250em)
-    #text(size: 11pt, style: "italic")[#subtitle]
-  ]
-  v(0.5em)
-  grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 0.25in,
-    field[Name:], field[Grade:], field[Date:],
-  )
-  block(fill: rgb("eef6ff"), stroke: rgb("2f5597"), radius: 5pt, inset: 7pt)[
-    #strong[Instructions:] Read each question carefully. Choose the best answer from A, B, C, or D. Shade or circle only one answer for each question. Total: 15 marks.
-  ]
-  line(length: 100%, stroke: 0.8pt + rgb("2f5597"))
-}
-
-#let choice(letter, body) = {
-  box(width: 48%, inset: (y: 0.03em))[#box(
-      width: 1.05em,
-      height: 1.05em,
-      stroke: 0.7pt,
-      radius: 50%,
-    )[] #strong[#letter.] #body]
-}
-
-#let question(num, body, choices) = {
-  block(above: 1.5em, below: 0em, breakable: false)[
-    #strong[#num.] #body
-    #v(-.5em)
-    #choices
-  ]
-}
-
-#let section(title) = {
-  block(above: 1.5em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
-}
-
-#header[Mathematics]
+#import "../main.typ": choice, question, quiz, section
+#show: quiz.with(subject: "Mathematics")
 
 #section[Number, Operations, and Money]
 #question(
@@ -66,7 +17,9 @@
 #question(
   5,
 )[A pencil costs \$45. How much will 4 pencils cost?][#choice[A][\$90] #choice[B][\$135] #choice[C][\$180] #choice[D][\$225]]
-#question(6)[Which number is 25% of 80?][#choice[A][10] #choice[B][20] #choice[C][25] #choice[D][40]]
+#question(
+  6,
+)[Which number is 25% of 80?][#choice[A][10] #choice[B][20] #choice[C][25] #choice[D][40]]
 
 #section[Measurement, Geometry, and Algebra]
 #block(breakable: false)[
@@ -90,7 +43,10 @@
 #section[Data Handling and Probability]
 #block(breakable: false)[
   #grid(columns: (1.5fr, 1fr), column-gutter: 0.2in, align: (center, top))[
-    #figure(image("../../assets/math_fruit_bar_chart.svg", width: 5.0in), caption: [Favourite fruits])
+    #figure(
+      image("../../assets/math_fruit_bar_chart.svg", width: 5.0in),
+      caption: [Favourite fruits],
+    )
   ][
     #set text(size: 12pt)
     #table(
