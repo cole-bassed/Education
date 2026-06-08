@@ -29,9 +29,9 @@
 
 #let choice(letter, body) = {
   box(width: 48%, inset: (y: 0.03em))[#box(
-      width: 1em,
-      height: 1em,
-      stroke: 0.75pt,
+      width: 1.05em,
+      height: 1.05em,
+      stroke: 0.7pt,
       radius: 50%,
     )[] #strong[#letter.] #body]
 }
@@ -45,8 +45,7 @@
 }
 
 #let section(title) = {
-  block(above: 1.5em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]
-  ]
+  block(above: 1.5em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
 }
 
 #header[Social Studies]

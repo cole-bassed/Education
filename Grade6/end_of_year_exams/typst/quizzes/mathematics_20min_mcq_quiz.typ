@@ -41,7 +41,6 @@
     #strong[#num.] #body
     #v(-.5em)
     #choices
-    // #v(.5em)
   ]
 }
 
