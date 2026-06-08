@@ -91,13 +91,13 @@
 #section[Data Handling and Probability]
 #block(breakable: false)[
   #grid(columns: (1.5fr, 1fr), column-gutter: 0.2in, align: (center, top))[
-    #figure(image("../../assets/math_fruit_bar_chart.svg", width: 3.0in), caption: [Favourite fruits])
+    #figure(image("../../assets/math_fruit_bar_chart.svg", width: 5.0in), caption: [Favourite fruits])
   ][
     #set text(size: 12pt)
     #table(
       columns: (1fr, 1fr),
       align: (left, center),
-      inset: 3pt,
+      inset: 4pt,
       table.header[*Fruit*][*Students*],
       [Mango], [8],
       [Banana], [5],
