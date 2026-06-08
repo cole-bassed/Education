@@ -49,7 +49,6 @@
   block(above: 1.75em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
 }
 
-
 #header[Mathematics]
 
 #section[Number, Operations, and Money]
