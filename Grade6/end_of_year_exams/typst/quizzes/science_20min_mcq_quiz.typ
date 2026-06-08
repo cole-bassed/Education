@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.03em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.05em, below: 0.4em, breakable: false)[
+  block(above: 0.45em, below: 1.0em, breakable: false)[
     #strong[#num.] #body
-    #v(0.3em)
+    #v(0.08em)
     #choices
   ]
 }
@@ -56,10 +56,12 @@
 #q(7)[Which habit best helps to prevent the spread of germs?][#choice[A][Sharing a water bottle] #choice[B][Washing hands with soap] #choice[C][Leaving food uncovered] #choice[D][Coughing without covering the mouth]]
 
 #section[Part B: Materials, Forces, and Energy]
-#table(columns: (1fr, 1.4fr), align: (left, left), inset: 5pt,
-  table.header[*Material*][*Observation in Water*],
-  [Salt], [Disappeared after stirring], [Sand], [Settled at the bottom], [Stone], [Sank to the bottom], [Plastic cap], [Floated on top]
-)
+#block(breakable: false)[
+  #table(columns: (1fr, 1.4fr), align: (left, left), inset: 5pt,
+    table.header[*Material*][*Observation in Water*],
+    [Salt], [Disappeared after stirring], [Sand], [Settled at the bottom], [Stone], [Sank to the bottom], [Plastic cap], [Floated on top]
+  )
+]
 #q(8)[Which material dissolved in water?][#choice[A][Sand] #choice[B][Stone] #choice[C][Salt] #choice[D][Plastic cap]]
 #q(9)[Which state of matter has a fixed shape and a fixed volume?][#choice[A][Solid] #choice[B][Liquid] #choice[C][Gas] #choice[D][Vapour]]
 #q(10)[What form of energy is mainly produced by a lit bulb?][#choice[A][Sound energy] #choice[B][Light energy] #choice[C][Magnetic energy] #choice[D][Chemical energy]]
@@ -67,10 +69,12 @@
 
 #pagebreak()
 #section[Part C: Earth Science and Scientific Thinking]
-#figure(image("../../assets/science_water_cycle.svg", width: 58%), caption: [The water cycle])
+#block(breakable: false)[#figure(image("../../assets/science_water_cycle.svg", width: 50%), caption: [The water cycle])]
 #q(12)[Which process changes water vapour into liquid water?][#choice[A][Melting] #choice[B][Freezing] #choice[C][Condensation] #choice[D][Evaporation]]
 #q(13)[Which process is shown when water falls from clouds as rain?][#choice[A][Precipitation] #choice[B][Evaporation] #choice[C][Melting] #choice[D][Freezing]]
 #q(14)[In a fair test, what should be changed on purpose?][#choice[A][The controlled variable] #choice[B][The independent variable] #choice[C][All variables] #choice[D][No variables]]
 #q(15)[Why should people avoid dumping garbage in gullies and rivers?][#choice[A][It makes the water colder.] #choice[B][It can cause pollution and flooding.] #choice[C][It makes fish grow faster.] #choice[D][It increases rainfall.]]
+
+
 
 

@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.03em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.05em, below: 0.4em, breakable: false)[
+  block(above: 0.45em, below: 1.0em, breakable: false)[
     #strong[#num.] #body
-    #v(0.3em)
+    #v(0.08em)
     #choices
   ]
 }
@@ -58,10 +58,12 @@
 #q(5)[Which activity did Keisha learn at the market?][#choice[A][Painting signs] #choice[B][Counting change] #choice[C][Driving a taxi] #choice[D][Cooking soup]]
 
 #section[Part B: Language Use]
-#table(columns: (1fr, 1fr), align: (left, left), inset: 5pt,
-  table.header[*Word*][*Part of Speech*],
-  [quickly], [adverb], [teacher], [noun], [beautiful], [adjective], [jump], [verb]
-)
+#block(breakable: false)[
+  #table(columns: (1fr, 1fr), align: (left, left), inset: 5pt,
+    table.header[*Word*][*Part of Speech*],
+    [quickly], [adverb], [teacher], [noun], [beautiful], [adjective], [jump], [verb]
+  )
+]
 #q(6)[Which word in the table names a person?][#choice[A][quickly] #choice[B][teacher] #choice[C][beautiful] #choice[D][jump]]
 #q(7)[Which sentence uses correct subject-verb agreement?][#choice[A][The boys runs quickly.] #choice[B][The boy run quickly.] #choice[C][The boys run quickly.] #choice[D][The boys running quickly.]]
 #q(8)[Choose the correctly punctuated sentence.][#choice[A][We visited Kingston Montego Bay and Mandeville.] #choice[B][We visited Kingston, Montego Bay, and Mandeville.] #choice[C][We visited Kingston Montego Bay, and Mandeville.] #choice[D][We visited, Kingston, Montego Bay and Mandeville.]]
@@ -75,5 +77,7 @@
 #q(13)[Which prefix can be added to "happy" to mean not happy?][#choice[A][re-] #choice[B][un-] #choice[C][pre-] #choice[D][mis-]]
 #q(14)[Which sentence is a complete sentence?][#choice[A][After the bell rang.] #choice[B][The students in the classroom.] #choice[C][Running quickly to the gate.] #choice[D][The students packed their bags.]]
 #q(15)[Which word should begin with a capital letter?][#choice[A][mango] #choice[B][river] #choice[C][jamaica] #choice[D][school]]
+
+
 
 

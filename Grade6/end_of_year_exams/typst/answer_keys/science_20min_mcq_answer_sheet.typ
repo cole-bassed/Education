@@ -17,6 +17,7 @@
   Correct answers are shaded in green. Keep this file separate from student papers.
 ]
 #v(0.8em)
+#block(breakable: false)[
 #table(columns: (0.7fr, 1fr, 1fr, 1fr, 1fr), align: center, inset: 6pt, stroke: rgb("999999"),
   table.header[*Question*][*A*][*B*][*C*][*D*],
   [1], [#bubble("A", correct: false)], [#bubble("B", correct: false)], [#bubble("C", correct: true)], [#bubble("D", correct: false)],
@@ -35,4 +36,4 @@
   [14], [#bubble("A", correct: false)], [#bubble("B", correct: true)], [#bubble("C", correct: false)], [#bubble("D", correct: false)],
   [15], [#bubble("A", correct: false)], [#bubble("B", correct: true)], [#bubble("C", correct: false)], [#bubble("D", correct: false)],
 )
-
+]

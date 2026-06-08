@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.03em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.05em, below: 0.4em, breakable: false)[
+  block(above: 0.45em, below: 1.0em, breakable: false)[
     #strong[#num.] #body
-    #v(0.3em)
+    #v(0.08em)
     #choices
   ]
 }
@@ -63,15 +63,19 @@
 
 #pagebreak()
 #section[Data Handling and Probability]
-#figure(image("../../assets/math_fruit_bar_chart.svg", width: 58%), caption: [Favourite fruits chosen by Grade 6 students])
-#table(columns: (1fr, 1fr), align: (left, center), inset: 5pt,
-  table.header[*Fruit*][*Number of Students*],
-  [Mango], [8], [Banana], [5], [Orange], [7], [Pineapple], [4]
-)
+#block(breakable: false)[#figure(image("../../assets/math_fruit_bar_chart.svg", width: 52%), caption: [Favourite fruits chosen by Grade 6 students])]
+#block(breakable: false)[
+  #table(columns: (1fr, 1fr), align: (left, center), inset: 5pt,
+    table.header[*Fruit*][*Number of Students*],
+    [Mango], [8], [Banana], [5], [Orange], [7], [Pineapple], [4]
+  )
+]
 
 #q(12)[Which fruit was chosen by the greatest number of students?][#choice[A][Mango] #choice[B][Banana] #choice[C][Orange] #choice[D][Pineapple]]
 #q(13)[How many more students chose mango than pineapple?][#choice[A][2] #choice[B][3] #choice[C][4] #choice[D][5]]
 #q(14)[A bus has 48 passengers. At a stop, 15 passengers get off and 9 get on. How many passengers are now on the bus?][#choice[A][24] #choice[B][33] #choice[C][42] #choice[D][54]]
 #q(15)[A spinner has 4 equal sections: red, blue, green, and yellow. Which colour is just as likely to be chosen as blue?][#choice[A][Red] #choice[B][Black] #choice[C][White] #choice[D][Brown]]
+
+
 
 
