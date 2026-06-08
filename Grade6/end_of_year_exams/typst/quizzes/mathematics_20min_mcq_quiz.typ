@@ -33,11 +33,11 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.15em, below: 0.2em, breakable: false)[
+  block(above: 0.15em, below: 0em, breakable: false)[
     #strong[#num.] #body
-    #v(-0.6em)
+    #v(0em)
     #choices
-    #v(0.65em)
+    #v(1.05em)
   ]
 }
 #let section(title) = {
@@ -66,9 +66,9 @@
 #block(breakable: false)[
   #section[Data Handling and Probability]
   #grid(columns: (1.2fr, 1fr), column-gutter: 0.2in, align: (center, top))[
-    #figure(image("../../assets/math_fruit_bar_chart.svg", width: 2.4in), caption: [Favourite fruits])
+    #figure(image("../../assets/math_fruit_bar_chart.svg", width: 3.0in), caption: [Favourite fruits])
   ][
-    #set text(size: 9.5pt)
+    #set text(size: 10pt)
     #table(columns: (1fr, 1fr), align: (left, center), inset: 3pt,
       table.header[*Fruit*][*Students*],
       [Mango], [8], [Banana], [5], [Orange], [7], [Pineapple], [4]
@@ -80,6 +80,9 @@
 #q(13)[How many more students chose mango than pineapple?][#choice[A][2] #choice[B][3] #choice[C][4] #choice[D][5]]
 #q(14)[A bus has 48 passengers. At a stop, 15 passengers get off and 9 get on. How many passengers are now on the bus?][#choice[A][24] #choice[B][33] #choice[C][42] #choice[D][54]]
 #q(15)[A spinner has 4 equal sections: red, blue, green, and yellow. Which colour is just as likely to be chosen as blue?][#choice[A][Red] #choice[B][Black] #choice[C][White] #choice[D][Brown]]
+
+
+
 
 
 

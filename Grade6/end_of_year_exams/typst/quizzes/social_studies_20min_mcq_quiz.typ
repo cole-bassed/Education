@@ -33,11 +33,11 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.15em, below: 0.2em, breakable: false)[
+  block(above: 0.15em, below: 0em, breakable: false)[
     #strong[#num.] #body
-    #v(-0.6em)
+    #v(0em)
     #choices
-    #v(0.65em)
+    #v(1.05em)
   ]
 }
 #let section(title) = {
@@ -71,8 +71,8 @@
 
 #block(breakable: false)[
   #section[Part C: Map Skills and Disaster Preparedness]
-  #grid(columns: (0.95in, 1fr), column-gutter: 0.2in, align: (center, horizon))[
-    #image("../../assets/social_studies_compass.svg", width: 0.85in)
+  #grid(columns: (1.25in, 1fr), column-gutter: 0.2in, align: (center, horizon))[
+    #image("../../assets/social_studies_compass.svg", width: 1.15in)
   ][
     Use the compass rose to answer Question 11.
   ]
@@ -82,6 +82,9 @@
 #q(13)[Which activity is an example of agriculture?][#choice[A][Growing yam] #choice[B][Repairing a computer] #choice[C][Driving a tourist bus] #choice[D][Selling insurance]]
 #q(14)[Before a hurricane, a family should][#choice[A][prepare an emergency kit.] #choice[B][leave windows open.] #choice[C][go swimming in the sea.] #choice[D][ignore weather reports.]]
 #q(15)[Which statement best shows regional cooperation in the Caribbean?][#choice[A][Countries refusing to speak to each other] #choice[B][Caribbean countries working together through CARICOM] #choice[C][Each island closing all schools permanently] #choice[D][People avoiding trade with neighbours]]
+
+
+
 
 
 

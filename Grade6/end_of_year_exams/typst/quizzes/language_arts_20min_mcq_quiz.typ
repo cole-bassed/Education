@@ -33,11 +33,11 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.15em, below: 0.2em, breakable: false)[
+  block(above: 0.15em, below: 0em, breakable: false)[
     #strong[#num.] #body
-    #v(-0.6em)
+    #v(0em)
     #choices
-    #v(0.65em)
+    #v(1.05em)
   ]
 }
 #let section(title) = {
@@ -77,6 +77,9 @@
 #q(13)[Which prefix can be added to "happy" to mean not happy?][#choice[A][re-] #choice[B][un-] #choice[C][pre-] #choice[D][mis-]]
 #q(14)[Which sentence is a complete sentence?][#choice[A][After the bell rang.] #choice[B][The students in the classroom.] #choice[C][Running quickly to the gate.] #choice[D][The students packed their bags.]]
 #q(15)[Which word should begin with a capital letter?][#choice[A][mango] #choice[B][river] #choice[C][jamaica] #choice[D][school]]
+
+
+
 
 
 

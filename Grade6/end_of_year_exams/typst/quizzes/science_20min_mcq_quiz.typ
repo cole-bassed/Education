@@ -33,11 +33,11 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.15em, below: 0.2em, breakable: false)[
+  block(above: 0.15em, below: 0em, breakable: false)[
     #strong[#num.] #body
-    #v(-0.6em)
+    #v(0em)
     #choices
-    #v(0.65em)
+    #v(1.05em)
   ]
 }
 #let section(title) = {
@@ -69,8 +69,8 @@
 
 #block(breakable: false)[
   #section[Part C: Earth Science and Scientific Thinking]
-  #grid(columns: (1.35in, 1fr), column-gutter: 0.25in, align: (center, horizon))[
-    #image("../../assets/science_water_cycle.svg", width: 1.2in)
+  #grid(columns: (1.75in, 1fr), column-gutter: 0.25in, align: (center, horizon))[
+    #image("../../assets/science_water_cycle.svg", width: 1.65in)
   ][
     Use the water cycle diagram to answer Questions 12 and 13.
   ]
@@ -79,6 +79,9 @@
 #q(13)[Which process is shown when water falls from clouds as rain?][#choice[A][Precipitation] #choice[B][Evaporation] #choice[C][Melting] #choice[D][Freezing]]
 #q(14)[In a fair test, what should be changed on purpose?][#choice[A][The controlled variable] #choice[B][The independent variable] #choice[C][All variables] #choice[D][No variables]]
 #q(15)[Why should people avoid dumping garbage in gullies and rivers?][#choice[A][It makes the water colder.] #choice[B][It can cause pollution and flooding.] #choice[C][It makes fish grow faster.] #choice[D][It increases rainfall.]]
+
+
+
 
 
 
