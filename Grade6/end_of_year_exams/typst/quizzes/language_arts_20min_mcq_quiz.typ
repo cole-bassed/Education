@@ -41,13 +41,14 @@
     #strong[#num.] #body
     #v(-.5em)
     #choices
-    #v(.5em)
+    // #v(.5em)
   ]
 }
 
 #let section(title) = {
-  block(above: 1.75em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
+  block(above: 1.5em, below: 1em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
 }
+
 
 #header[Language Arts]
 
