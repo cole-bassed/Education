@@ -33,15 +33,15 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.25em, below: 0.55em, breakable: false)[
+  block(above: 0.15em, below: 0.2em, breakable: false)[
     #strong[#num.] #body
-    #v(0.06em)
+    #v(-0.6em)
     #choices
+    #v(0.65em)
   ]
 }
-
 #let section(title) = {
-  block(above: 0.9em, below: 0.35em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
+  block(above: 0.6em, below: 0.25em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
 }
 
 #header[Social Studies]
@@ -61,14 +61,16 @@
 #q(5)[Which group is mainly responsible for making laws for Jamaica?][#choice[A][National government] #choice[B][School council] #choice[C][Police station] #choice[D][Parish library]]
 #q(6)[Which group helps manage parish services?][#choice[A][Local government] #choice[B][A football club] #choice[C][A supermarket] #choice[D][A tourist hotel]]
 
-#section[Part B: Citizenship and Resources]
-#q(7)[A responsible citizen should][#choice[A][ignore community rules.] #choice[B][throw garbage in drains.] #choice[C][respect the rights of others.] #choice[D][damage public property.]]
+#block(breakable: false)[
+  #section[Part B: Citizenship and Resources]
+  #q(7)[A responsible citizen should][#choice[A][ignore community rules.] #choice[B][throw garbage in drains.] #choice[C][respect the rights of others.] #choice[D][damage public property.]]
+]
 #q(8)[Which Caribbean country is closest to Jamaica?][#choice[A][Barbados] #choice[B][Cuba] #choice[C][Trinidad and Tobago] #choice[D][Guyana]]
 #q(9)[Why is tourism important to Jamaica?][#choice[A][It causes all farms to close.] #choice[B][It provides jobs and earns income.] #choice[C][It stops people from travelling.] #choice[D][It prevents trade with other countries.]]
 #q(10)[Which physical feature is found in Jamaica?][#choice[A][Blue Mountains] #choice[B][Sahara Desert] #choice[C][Amazon River] #choice[D][Rocky Mountains]]
 
-#section[Part C: Map Skills and Disaster Preparedness]
 #block(breakable: false)[
+  #section[Part C: Map Skills and Disaster Preparedness]
   #grid(columns: (0.95in, 1fr), column-gutter: 0.2in, align: (center, horizon))[
     #image("../../assets/social_studies_compass.svg", width: 0.85in)
   ][
@@ -80,6 +82,8 @@
 #q(13)[Which activity is an example of agriculture?][#choice[A][Growing yam] #choice[B][Repairing a computer] #choice[C][Driving a tourist bus] #choice[D][Selling insurance]]
 #q(14)[Before a hurricane, a family should][#choice[A][prepare an emergency kit.] #choice[B][leave windows open.] #choice[C][go swimming in the sea.] #choice[D][ignore weather reports.]]
 #q(15)[Which statement best shows regional cooperation in the Caribbean?][#choice[A][Countries refusing to speak to each other] #choice[B][Caribbean countries working together through CARICOM] #choice[C][Each island closing all schools permanently] #choice[D][People avoiding trade with neighbours]]
+
+
 
 
 

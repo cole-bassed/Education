@@ -33,15 +33,15 @@
 }
 
 #let q(num, body, choices) = {
-  block(above: 0.45em, below: 1.0em, breakable: false)[
+  block(above: 0.15em, below: 0.2em, breakable: false)[
     #strong[#num.] #body
-    #v(0.08em)
+    #v(-0.6em)
     #choices
+    #v(0.65em)
   ]
 }
-
 #let section(title) = {
-  block(above: 0.9em, below: 0.35em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
+  block(above: 0.6em, below: 0.25em, fill: rgb("f2f2f2"), stroke: rgb("b7b7b7"), radius: 4pt, inset: 5pt)[#strong[#title]]
 }
 
 #header[Language Arts]
@@ -57,14 +57,14 @@
 #q(4)[In the passage, the word "politely" means acting in a way that is][#choice[A][rude.] #choice[B][respectful.] #choice[C][noisy.] #choice[D][hurried.]]
 #q(5)[Which activity did Keisha learn at the market?][#choice[A][Painting signs] #choice[B][Counting change] #choice[C][Driving a taxi] #choice[D][Cooking soup]]
 
-#section[Part B: Language Use]
 #block(breakable: false)[
-  #table(columns: (1fr, 1fr), align: (left, left), inset: 5pt,
+  #section[Part B: Language Use]
+  #table(columns: (1fr, 1fr), align: (left, left), inset: 4pt,
     table.header[*Word*][*Part of Speech*],
     [quickly], [adverb], [teacher], [noun], [beautiful], [adjective], [jump], [verb]
   )
+  #q(6)[Which word in the table names a person?][#choice[A][quickly] #choice[B][teacher] #choice[C][beautiful] #choice[D][jump]]
 ]
-#q(6)[Which word in the table names a person?][#choice[A][quickly] #choice[B][teacher] #choice[C][beautiful] #choice[D][jump]]
 #q(7)[Which sentence uses correct subject-verb agreement?][#choice[A][The boys runs quickly.] #choice[B][The boy run quickly.] #choice[C][The boys run quickly.] #choice[D][The boys running quickly.]]
 #q(8)[Choose the correctly punctuated sentence.][#choice[A][We visited Kingston Montego Bay and Mandeville.] #choice[B][We visited Kingston, Montego Bay, and Mandeville.] #choice[C][We visited Kingston Montego Bay, and Mandeville.] #choice[D][We visited, Kingston, Montego Bay and Mandeville.]]
 #q(9)[Which word is the antonym of "generous"?][#choice[A][kind] #choice[B][giving] #choice[C][selfish] #choice[D][cheerful]]
@@ -77,6 +77,8 @@
 #q(13)[Which prefix can be added to "happy" to mean not happy?][#choice[A][re-] #choice[B][un-] #choice[C][pre-] #choice[D][mis-]]
 #q(14)[Which sentence is a complete sentence?][#choice[A][After the bell rang.] #choice[B][The students in the classroom.] #choice[C][Running quickly to the gate.] #choice[D][The students packed their bags.]]
 #q(15)[Which word should begin with a capital letter?][#choice[A][mango] #choice[B][river] #choice[C][jamaica] #choice[D][school]]
+
+
 
 
 
