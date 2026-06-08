@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520">
+  <rect width="520" height="520" fill="#ffffff"/>
+  <text x="260" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">Compass Rose</text>
+  <circle cx="260" cy="270" r="150" fill="#f7fbff" stroke="#222" stroke-width="3"/>
+  <line x1="260" y1="95" x2="260" y2="445" stroke="#222" stroke-width="4"/>
+  <line x1="85" y1="270" x2="435" y2="270" stroke="#222" stroke-width="4"/>
+  <polygon points="260,75 235,145 285,145" fill="#e74c3c"/>
+  <polygon points="260,465 235,395 285,395" fill="#3498db"/>
+  <polygon points="65,270 135,245 135,295" fill="#3498db"/>
+  <polygon points="455,270 385,245 385,295" fill="#3498db"/>
+  <g font-family="Arial" font-size="34" font-weight="bold" fill="#222">
+    <text x="260" y="82" text-anchor="middle">N</text>
+    <text x="260" y="495" text-anchor="middle">S</text>
+    <text x="45" y="282" text-anchor="middle">W</text>
+    <text x="475" y="282" text-anchor="middle">E</text>
+  </g>
+</svg>
