@@ -29,7 +29,7 @@
 }
 
 #let choice(letter, body) = {
-  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 2pt)[] #strong[#letter.] #body]
+  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
