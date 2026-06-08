@@ -10,17 +10,31 @@ Project folder:
 Grade6/end_of_year_exams
 ```
 
-Typst quiz sources:
+Student quiz Typst sources:
 
 ```sh
 Grade6/end_of_year_exams/typst/quizzes
 ```
 
-Compiled PDFs:
+Teacher answer sheet Typst sources:
+
+```sh
+Grade6/end_of_year_exams/typst/answer_keys
+```
+
+Compiled student quiz PDFs:
 
 ```sh
 Grade6/end_of_year_exams/build/quizzes
 ```
+
+Compiled teacher answer sheet PDFs:
+
+```sh
+Grade6/end_of_year_exams/build/answer_keys
+```
+
+Student papers do not include answer sheets. Answer sheets are built as separate accompanying PDFs with shaded correct responses.
 
 ## Commands
 
@@ -33,8 +47,8 @@ nix develop
 Inside the development shell, use these shortcuts:
 
 ```sh
-qbuild  # compile Grade 6 quiz PDFs
-qopen   # open/read all compiled quiz PDFs
+qbuild  # compile Grade 6 quiz PDFs and answer sheets
+qopen   # open/read all compiled student quiz PDFs
 qmath   # open/read Mathematics quiz
 qlang   # open/read Language Arts quiz
 qsci    # open/read Science quiz
@@ -54,7 +68,7 @@ nix run .#open-science
 nix run .#open-social-studies
 ```
 
-Build the quiz PDFs as a Nix package:
+Build the quiz PDFs and teacher answer sheets as a Nix package:
 
 ```sh
 nix build .#quiz-pdfs

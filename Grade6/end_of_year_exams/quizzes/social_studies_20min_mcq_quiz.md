@@ -130,20 +130,4 @@ D. People avoiding trade with neighbours
 
 ---
 
-## Answer Key
-
-1. C
-2. A
-3. A
-4. A
-5. A
-6. A
-7. C
-8. B
-9. B
-10. A
-11. C
-12. B
-13. A
-14. A
-15. B
+> Teacher answer sheets are provided separately in `../build/answer_keys/` after running `qbuild`.

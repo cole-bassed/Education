@@ -19,7 +19,9 @@
 
         projectRoot = "Grade6/end_of_year_exams";
         quizSources = "${projectRoot}/typst/quizzes";
+        answerKeySources = "${projectRoot}/typst/answer_keys";
         quizOutput = "${projectRoot}/build/quizzes";
+        answerKeyOutput = "${projectRoot}/build/answer_keys";
 
         compileQuizzes = pkgs.writeShellApplication {
           name = "qbuild";
@@ -34,12 +36,18 @@
               exit 1
             fi
 
-            mkdir -p "$root/${quizOutput}"
+            mkdir -p "$root/${quizOutput}" "$root/${answerKeyOutput}"
 
             for src in "$root/${quizSources}"/*.typ; do
               name="$(basename "$src" .typ)"
               typst compile --root "$root/${projectRoot}" "$src" "$root/${quizOutput}/$name.pdf"
               echo "built ${quizOutput}/$name.pdf"
+            done
+
+            for src in "$root/${answerKeySources}"/*.typ; do
+              name="$(basename "$src" .typ)"
+              typst compile --root "$root/${projectRoot}" "$src" "$root/${answerKeyOutput}/$name.pdf"
+              echo "built ${answerKeyOutput}/$name.pdf"
             done
           '';
         };
@@ -123,10 +131,14 @@
           installPhase = ''
             runHook preInstall
 
-            mkdir -p "$out/quizzes"
+            mkdir -p "$out/quizzes" "$out/answer_keys"
             for src in ${quizSources}/*.typ; do
               name="$(basename "$src" .typ)"
               typst compile --root ${projectRoot} "$src" "$out/quizzes/$name.pdf"
+            done
+            for src in ${answerKeySources}/*.typ; do
+              name="$(basename "$src" .typ)"
+              typst compile --root ${projectRoot} "$src" "$out/answer_keys/$name.pdf"
             done
 
             runHook postInstall
@@ -201,8 +213,8 @@
           shellHook = ''
             echo "Education dev shell"
             echo "Shortcuts:"
-            echo "  qbuild  # compile Grade 6 quiz PDFs into ${quizOutput}"
-            echo "  qopen   # open/read all compiled PDFs"
+            echo "  qbuild  # compile Grade 6 quiz PDFs and answer sheets"
+            echo "  qopen   # open/read all compiled student quiz PDFs"
             echo "  qmath   # open/read Mathematics quiz"
             echo "  qlang   # open/read Language Arts quiz"
             echo "  qsci    # open/read Science quiz"

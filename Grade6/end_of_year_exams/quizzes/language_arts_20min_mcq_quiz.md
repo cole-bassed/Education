@@ -98,7 +98,7 @@ D. I will walk to school.
 
 11. Which word correctly completes the sentence?
 
-Maria and I ___ going to the library.
+Maria and I blank going to the library.
 
 A. is
 B. am
@@ -135,20 +135,4 @@ D. school
 
 ---
 
-## Answer Key
-
-1. B
-2. A
-3. C
-4. B
-5. B
-6. B
-7. C
-8. B
-9. C
-10. C
-11. C
-12. B
-13. B
-14. D
-15. C
+> Teacher answer sheets are provided separately in `../build/answer_keys/` after running `qbuild`.
