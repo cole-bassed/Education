@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.35em, below: 0.65em, breakable: false)[
+  block(above: 1.05em, below: 0.4em, breakable: false)[
     #strong[#num.] #body
-    #v(0.45em)
+    #v(0.3em)
     #choices
   ]
 }
@@ -72,4 +72,5 @@
 #q(13)[Which process is shown when water falls from clouds as rain?][#choice[A][Precipitation] #choice[B][Evaporation] #choice[C][Melting] #choice[D][Freezing]]
 #q(14)[In a fair test, what should be changed on purpose?][#choice[A][The controlled variable] #choice[B][The independent variable] #choice[C][All variables] #choice[D][No variables]]
 #q(15)[Why should people avoid dumping garbage in gullies and rivers?][#choice[A][It makes the water colder.] #choice[B][It can cause pollution and flooding.] #choice[C][It makes fish grow faster.] #choice[D][It increases rainfall.]]
+
 

@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.35em, below: 0.65em, breakable: false)[
+  block(above: 1.05em, below: 0.4em, breakable: false)[
     #strong[#num.] #body
-    #v(0.45em)
+    #v(0.3em)
     #choices
   ]
 }
@@ -73,4 +73,5 @@
 #q(13)[Which activity is an example of agriculture?][#choice[A][Growing yam] #choice[B][Repairing a computer] #choice[C][Driving a tourist bus] #choice[D][Selling insurance]]
 #q(14)[Before a hurricane, a family should][#choice[A][prepare an emergency kit.] #choice[B][leave windows open.] #choice[C][go swimming in the sea.] #choice[D][ignore weather reports.]]
 #q(15)[Which statement best shows regional cooperation in the Caribbean?][#choice[A][Countries refusing to speak to each other] #choice[B][Caribbean countries working together through CARICOM] #choice[C][Each island closing all schools permanently] #choice[D][People avoiding trade with neighbours]]
+
 

@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.35em, below: 0.65em, breakable: false)[
+  block(above: 1.05em, below: 0.4em, breakable: false)[
     #strong[#num.] #body
-    #v(0.45em)
+    #v(0.3em)
     #choices
   ]
 }
@@ -73,4 +73,5 @@
 #q(13)[How many more students chose mango than pineapple?][#choice[A][2] #choice[B][3] #choice[C][4] #choice[D][5]]
 #q(14)[A bus has 48 passengers. At a stop, 15 passengers get off and 9 get on. How many passengers are now on the bus?][#choice[A][24] #choice[B][33] #choice[C][42] #choice[D][54]]
 #q(15)[A spinner has 4 equal sections: red, blue, green, and yellow. Which colour is just as likely to be chosen as blue?][#choice[A][Red] #choice[B][Black] #choice[C][White] #choice[D][Brown]]
+
 

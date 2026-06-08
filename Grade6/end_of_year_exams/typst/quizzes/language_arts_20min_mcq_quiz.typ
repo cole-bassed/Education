@@ -29,13 +29,13 @@
 }
 
 #let choice(letter, body) = {
-  block(above: 0.18em, below: 0.18em)[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
+  box(width: 48%, inset: (y: 0.08em))[#box(width: 1.05em, height: 1.05em, stroke: 0.7pt, radius: 50%)[] #strong[#letter.] #body]
 }
 
 #let q(num, body, choices) = {
-  block(above: 1.35em, below: 0.65em, breakable: false)[
+  block(above: 1.05em, below: 0.4em, breakable: false)[
     #strong[#num.] #body
-    #v(0.45em)
+    #v(0.3em)
     #choices
   ]
 }
@@ -75,4 +75,5 @@
 #q(13)[Which prefix can be added to "happy" to mean not happy?][#choice[A][re-] #choice[B][un-] #choice[C][pre-] #choice[D][mis-]]
 #q(14)[Which sentence is a complete sentence?][#choice[A][After the bell rang.] #choice[B][The students in the classroom.] #choice[C][Running quickly to the gate.] #choice[D][The students packed their bags.]]
 #q(15)[Which word should begin with a capital letter?][#choice[A][mango] #choice[B][river] #choice[C][jamaica] #choice[D][school]]
+
 
