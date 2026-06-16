@@ -1,35 +1,57 @@
-#import "../main.typ": choice, question, quiz, section
+#import "../main.typ": *
 #show: quiz.with(subject: "Science")
 
 #section[Part A: Living Things and Human Body Systems]
 
-#question(
+#multiple-choice(
   1,
-)[Which part of a plant mainly absorbs water from the soil?][#choice[A][Flower] #choice[B][Leaf] #choice[C][Root] #choice[D][Fruit]]
-
-#question(
+  [Which part of a plant mainly absorbs water from the soil?],
+  a: [Flower],
+  b: [Leaf],
+  c: [Root],
+  d: [Fruit],
+)
+#multiple-choice(
   2,
-)[In a food chain, green plants are called producers because they][#choice[A][eat small animals.] #choice[B][make their own food.] #choice[C][break down dead matter.] #choice[D][hunt for food at night.]]
-
-#question(
-  3,
-)[Which of the following is a consumer?][#choice[A][Grass] #choice[B][Mango tree] #choice[C][Goat] #choice[D][Fern]]
-
-#question(
+  [In a food chain, green plants are called producers because they],
+  a: [eat small animals.],
+  b: [make their own food.],
+  c: [break down dead matter.],
+  d: [hunt for food at night.],
+)
+#multiple-choice(3, [Which of the following is a consumer?], a: [Grass], b: [Mango tree], c: [Goat], d: [Fern])
+#multiple-choice(
   4,
-)[Which human body system is mainly responsible for carrying blood around the body?][#choice[A][Digestive system] #choice[B][Circulatory system] #choice[C][Skeletal system] #choice[D][Respiratory system]]
-
-#question(
+  [Which human body system is mainly responsible for carrying blood around the body?],
+  a: [Digestive system],
+  b: [Circulatory system],
+  c: [Skeletal system],
+  d: [Respiratory system],
+)
+#multiple-choice(
   5,
-)[Which body system breaks down food so nutrients can be absorbed?][#choice[A][Digestive system] #choice[B][Respiratory system] #choice[C][Skeletal system] #choice[D][Nervous system]]
-
-#question(
+  [Which body system breaks down food so nutrients can be absorbed?],
+  a: [Digestive system],
+  b: [Respiratory system],
+  c: [Skeletal system],
+  d: [Nervous system],
+)
+#multiple-choice(
   6,
-)[The main purpose of the reproductive system is to][#choice[A][pump blood.] #choice[B][remove waste from the body.] #choice[C][help living things produce offspring.] #choice[D][protect the brain and spinal cord.]]
-
-#question(
+  [The main purpose of the reproductive system is to],
+  a: [pump blood.],
+  b: [remove waste from the body.],
+  c: [help living things produce offspring.],
+  d: [protect the brain and spinal cord.],
+)
+#multiple-choice(
   7,
-)[Which habit best helps to prevent the spread of germs?][#choice[A][Sharing a water bottle] #choice[B][Washing hands with soap] #choice[C][Leaving food uncovered] #choice[D][Coughing without covering the mouth]]
+  [Which habit best helps to prevent the spread of germs?],
+  a: [Sharing a water bottle],
+  b: [Washing hands with soap],
+  c: [Leaving food uncovered],
+  d: [Coughing without covering the mouth],
+)
 
 #section[Part B: Materials, Forces, and Energy]
 #block(breakable: false)[
@@ -45,21 +67,31 @@
   )
 ]
 
-#question(
-  8,
-)[Which material dissolved in water?][#choice[A][Sand] #choice[B][Stone] #choice[C][Salt] #choice[D][Plastic cap]]
-
-#question(
+#multiple-choice(8, [Which material dissolved in water?], a: [Sand], b: [Stone], c: [Salt], d: [Plastic cap])
+#multiple-choice(
   9,
-)[Which state of matter has a fixed shape and a fixed volume?][#choice[A][Solid] #choice[B][Liquid] #choice[C][Gas] #choice[D][Vapour]]
-
-#question(
+  [Which state of matter has a fixed shape and a fixed volume?],
+  a: [Solid],
+  b: [Liquid],
+  c: [Gas],
+  d: [Vapour],
+)
+#multiple-choice(
   10,
-)[What form of energy is mainly produced by a lit bulb?][#choice[A][Sound energy] #choice[B][Light energy] #choice[C][Magnetic energy] #choice[D][Chemical energy]]
-
-#question(
+  [What form of energy is mainly produced by a lit bulb?],
+  a: [Sound energy],
+  b: [Light energy],
+  c: [Magnetic energy],
+  d: [Chemical energy],
+)
+#multiple-choice(
   11,
-)[Which force pulls objects towards the Earth?][#choice[A][Friction] #choice[B][Gravity] #choice[C][Magnetism] #choice[D][Electricity]]
+  [Which force pulls objects towards the Earth?],
+  a: [Friction],
+  b: [Gravity],
+  c: [Magnetism],
+  d: [Electricity],
+)
 
 #section[Part C: Earth Science and Scientific Thinking]
 
@@ -68,17 +100,35 @@
   Use the water cycle diagram to answer Questions 12 and 13.
 ]
 
-#question(
+#multiple-choice(
   12,
-)[Which process changes water vapour into liquid water?][#choice[A][Melting] #choice[B][Freezing] #choice[C][Condensation] #choice[D][Evaporation]]
-
-#question(
+  [Which process changes water vapour into liquid water?],
+  a: [Melting],
+  b: [Freezing],
+  c: [Condensation],
+  d: [Evaporation],
+)
+#multiple-choice(
   13,
-)[Which process is shown when water falls from clouds as rain?][#choice[A][Precipitation] #choice[B][Evaporation] #choice[C][Melting] #choice[D][Freezing]]
-
-#question(
+  [Which process is shown when water falls from clouds as rain?],
+  a: [Precipitation],
+  b: [Evaporation],
+  c: [Melting],
+  d: [Freezing],
+)
+#multiple-choice(
   14,
-)[In a fair test, what should be changed on purpose?][#choice[A][The controlled variable] #choice[B][The independent variable] #choice[C][All variables] #choice[D][No variables]]
-#question(
+  [In a fair test, what should be changed on purpose?],
+  a: [The controlled variable],
+  b: [The independent variable],
+  c: [All variables],
+  d: [No variables],
+)
+#multiple-choice(
   15,
-)[Why should people avoid dumping garbage in gullies and rivers?][#choice[A][It makes the water colder.] #choice[B][It can cause pollution and flooding.] #choice[C][It makes fish grow faster.] #choice[D][It increases rainfall.]]
+  [Why should people avoid dumping garbage in gullies and rivers?],
+  a: [It makes the water colder.],
+  b: [It can cause pollution and flooding.],
+  c: [It makes fish grow faster.],
+  d: [It increases rainfall.],
+)

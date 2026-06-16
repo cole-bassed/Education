@@ -1,43 +1,40 @@
-#import "../main.typ": choice, question, quiz, section
+#import "../main.typ": *
 #show: quiz.with(subject: "Social Studies")
 
 #section[Part A: Jamaica - Identity and Government]
 
-#question(
+#multiple-choice(
   1,
-)[Which city is the capital of Jamaica?][
-  #choice[A][Montego Bay]
-  #choice[B][Mandeville]
-  #choice[C][Kingston]
-  #choice[D][Port Antonio]
-]
-
-#question(
+  [Which city is the capital of Jamaica?],
+  a: [Montego Bay],
+  b: [Mandeville],
+  c: [Kingston],
+  d: [Port Antonio],
+)
+#multiple-choice(
   2,
-)[Which of the following is a national symbol of Jamaica?][
-  #choice[A][Doctor bird]
-  #choice[B][Lion]
-  #choice[C][Coconut crab]
-  #choice[D][Maple leaf]
-]
-
-#question(
+  [Which of the following is a national symbol of Jamaica?],
+  a: [Doctor bird],
+  b: [Lion],
+  c: [Coconut crab],
+  d: [Maple leaf],
+)
+#multiple-choice(
   3,
-)[What do the black, green, and gold colours of the Jamaican flag represent?][
-  #choice[A][Hardships, land, and sunshine]
-  #choice[B][Rivers, mountains, and food]
-  #choice[C][Music, sports, and festivals]
-  #choice[D][Cities, roads, and buildings]
-]
-
-#question(
+  [What do the black, green, and gold colours of the Jamaican flag represent?],
+  a: [Hardships, land, and sunshine],
+  b: [Rivers, mountains, and food],
+  c: [Music, sports, and festivals],
+  d: [Cities, roads, and buildings],
+)
+#multiple-choice(
   4,
-)[Which National Hero is associated with the Morant Bay Rebellion?][
-  #choice[A][Paul Bogle]
-  #choice[B][Marcus Garvey]
-  #choice[C][Norman Manley]
-  #choice[D][Alexander Bustamante]
-]
+  [Which National Hero is associated with the Morant Bay Rebellion?],
+  a: [Paul Bogle],
+  b: [Marcus Garvey],
+  c: [Norman Manley],
+  d: [Alexander Bustamante],
+)
 
 #block(breakable: false)[
   #v(1em)
@@ -52,61 +49,57 @@
   )
 ]
 
-#question(
+#multiple-choice(
   5,
-)[Which group is mainly responsible for making laws for Jamaica?][
-  #choice[A][National government]
-  #choice[B][School council]
-  #choice[C][Police station]
-  #choice[D][Parish library]
-]
-
-#question(
+  [Which group is mainly responsible for making laws for Jamaica?],
+  a: [National government],
+  b: [School council],
+  c: [Police station],
+  d: [Parish library],
+)
+#multiple-choice(
   6,
-)[Which group helps manage parish services?][
-  #choice[A][Local government]
-  #choice[B][A football club]
-  #choice[C][A supermarket]
-  #choice[D][A tourist hotel]
-]
+  [Which group helps manage parish services?],
+  a: [Local government],
+  b: [A football club],
+  c: [A supermarket],
+  d: [A tourist hotel],
+)
 
 #section[Part B: Citizenship and Resources]
 
-#question(
+#multiple-choice(
   7,
-)[A responsible citizen should][
-  #choice[A][ignore community rules.]
-  #choice[B][throw garbage in drains.]
-  #choice[C][respect the rights of others.]
-  #choice[D][damage public property.]
-]
-
-#question(
+  [A responsible citizen should],
+  a: [ignore community rules.],
+  b: [throw garbage in drains.],
+  c: [respect the rights of others.],
+  d: [damage public property.],
+)
+#multiple-choice(
   8,
-)[Which Caribbean country is closest to Jamaica?][
-  #choice[A][Barbados]
-  #choice[B][Cuba]
-  #choice[C][Trinidad and Tobago]
-  #choice[D][Guyana]
-]
-
-#question(
+  [Which Caribbean country is closest to Jamaica?],
+  a: [Barbados],
+  b: [Cuba],
+  c: [Trinidad and Tobago],
+  d: [Guyana],
+)
+#multiple-choice(
   9,
-)[Why is tourism important to Jamaica?][
-  #choice[A][It causes all farms to close.]
-  #choice[B][It provides jobs and earns income.]
-  #choice[C][It stops people from travelling.]
-  #choice[D][It prevents trade with other countries.]
-]
-
-#question(
+  [Why is tourism important to Jamaica?],
+  a: [It causes all farms to close.],
+  b: [It provides jobs and earns income.],
+  c: [It stops people from travelling.],
+  d: [It prevents trade with other countries.],
+)
+#multiple-choice(
   10,
-)[Which physical feature is found in Jamaica?][
-  #choice[A][Blue Mountains]
-  #choice[B][Sahara Desert]
-  #choice[C][Amazon River]
-  #choice[D][Rocky Mountains]
-]
+  [Which physical feature is found in Jamaica?],
+  a: [Blue Mountains],
+  b: [Sahara Desert],
+  c: [Amazon River],
+  d: [Rocky Mountains],
+)
 
 #section[Part C: Map Skills and Disaster Preparedness]
 #align(center)[
@@ -114,47 +107,36 @@
   Use the compass rose to answer Question 11.
 ]
 
-#question(
-  11,
-)[Which direction is opposite north?][
-  #choice[A][East]
-  #choice[B][West]
-  #choice[C][South]
-  #choice[D][North-east]
-]
-
-#question(
+#multiple-choice(11, [Which direction is opposite north?], a: [East], b: [West], c: [South], d: [North-east])
+#multiple-choice(
   12,
-)[On a map, a symbol is used to][
-  #choice[A][make the map heavier.]
-  #choice[B][show information such as roads, rivers, or buildings.]
-  #choice[C][hide important places.]
-  #choice[D][replace the map title.]
-]
-
-#question(
+  [On a map, a symbol is used to],
+  a: [make the map heavier.],
+  b: [show information such as roads, rivers, or buildings.],
+  c: [hide important places.],
+  d: [replace the map title.],
+)
+#multiple-choice(
   13,
-)[Which activity is an example of agriculture?][
-  #choice[A][Growing yam]
-  #choice[B][Repairing a computer]
-  #choice[C][Driving a tourist bus]
-  #choice[D][Selling insurance]
-]
-
-#question(
+  [Which activity is an example of agriculture?],
+  a: [Growing yam],
+  b: [Repairing a computer],
+  c: [Driving a tourist bus],
+  d: [Selling insurance],
+)
+#multiple-choice(
   14,
-)[Before a hurricane, a family should][
-  #choice[A][prepare an emergency kit.]
-  #choice[B][leave windows open.]
-  #choice[C][go swimming in the sea.]
-  #choice[D][ignore weather reports.]
-]
-
-#question(
+  [Before a hurricane, a family should],
+  a: [prepare an emergency kit.],
+  b: [leave windows open.],
+  c: [go swimming in the sea.],
+  d: [ignore weather reports.],
+)
+#multiple-choice(
   15,
-)[Which statement best shows regional cooperation in the Caribbean?][
-  #choice[A][Countries refusing to speak to each other]
-  #choice[B][Caribbean countries working together through CARICOM]
-  #choice[C][Each island closing all schools permanently]
-  #choice[D][People avoiding trade with neighbours]
-]
+  [Which statement best shows regional cooperation in the Caribbean?],
+  a: [Countries refusing to speak to each other],
+  b: [Caribbean countries working together through CARICOM],
+  c: [Each island closing all schools permanently],
+  d: [People avoiding trade with neighbours],
+)

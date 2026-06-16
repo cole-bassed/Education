@@ -1,6 +1,4 @@
-#import "../main.typ": (
-  blank-line, choice, match-table, question, quiz, section, short-answer, short-answer-lines, true-false,
-)
+#import "../main.typ": *
 #show: quiz.with(
   subject: "Reading",
   subtitle: "Reading Skills Quiz — 15 marks",
@@ -19,30 +17,62 @@
 ]
 
 #section[Part A: Multiple Choice — 4 marks]
-#question(1, [What is the best title for the passage?])[
-  #choice[A][A Rainy School Day]
-  #choice[B][The Community Garden]
-  #choice[C][A Trip to Kingston]
-  #choice[D][Andre's New Bicycle]
-]
-#question(2, [The word "seedlings" refers to])[
-  #choice[A][young plants]
-  #choice[B][large stones]
-  #choice[C][full baskets]
-  #choice[D][garden tools]
-]
-#question(3, [What can you infer about the younger children?])[
-  #choice[A][They were confident gardeners.]
-  #choice[B][They were unsure of what to do.]
-  #choice[C][They wanted to leave forever.]
-  #choice[D][They were angry.]
-]
-#question(4, [What is the main idea of the passage?])[
-  #choice[A][Rain always falls on Saturdays.]
-  #choice[B][People can work together to care for a garden.]
-  #choice[C][Children should never plant seeds.]
-  #choice[D][Vegetables grow without help.]
-]
+#multiple-choice(
+  1,
+  [What is the best title for the passage?],
+  a: [A Rainy School Day],
+  b: [The Community Garden],
+  c: [A Trip to Kingston],
+  d: [Andre's New Bicycle],
+)
+#multiple-choice(
+  2,
+  [The word "seedlings" refers to],
+  a: [young plants],
+  b: [large stones],
+  c: [full baskets],
+  d: [garden tools],
+)
+#multiple-choice(
+  3,
+  [What can you infer about the younger children?],
+  a: [They were confident gardeners.],
+  b: [They were unsure of what to do.],
+  c: [They wanted to leave forever.],
+  d: [They were angry.],
+)
+#multiple-choice(
+  4,
+  [What is the main idea of the passage?],
+  a: [Rain always falls on Saturdays.],
+  b: [People can work together to care for a garden.],
+  c: [Children should never plant seeds.],
+  d: [Vegetables grow without help.],
+)
+// #question(1, [What is the best title for the passage?])[
+//   #choice[A][A Rainy School Day]
+//   #choice[B][The Community Garden]
+//   #choice[C][A Trip to Kingston]
+//   #choice[D][Andre's New Bicycle]
+// ]
+// #question(2, [The word "seedlings" refers to])[
+//   #choice[A][young plants]
+//   #choice[B][large stones]
+//   #choice[C][full baskets]
+//   #choice[D][garden tools]
+// ]
+// #question(3, [What can you infer about the younger children?])[
+//   #choice[A][They were confident gardeners.]
+//   #choice[B][They were unsure of what to do.]
+//   #choice[C][They wanted to leave forever.]
+//   #choice[D][They were angry.]
+// ]
+// #question(4, [What is the main idea of the passage?])[
+//   #choice[A][Rain always falls on Saturdays.]
+//   #choice[B][People can work together to care for a garden.]
+//   #choice[C][Children should never plant seeds.]
+//   #choice[D][Vegetables grow without help.]
+// ]
 
 #section[Part B: Fill in the Blanks — 3 marks]
 Use words from the passage to complete each sentence.
