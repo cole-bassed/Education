@@ -9,7 +9,7 @@
   box(width: width, stroke: (bottom: 0.7pt), inset: (bottom: 3pt))[#label]
 }
 
-#let header(subject, subtitle: "20-Minute Multiple-Choice Quiz") = {
+#let header(subject, subtitle: "20-Minute Multiple-Choice Quiz", instructions: none) = {
   align(center)[
     #text(size: 17pt, weight: "bold")[Porus Primary School]
     #v(-.75em)
@@ -23,8 +23,9 @@
     column-gutter: 0.25in,
     field[Name:], field[Grade:], field[Date:],
   )
+  let default-instructions = [Read each question carefully. Choose the best answer from A, B, C, or D. Shade or circle only one answer for each question.]
   block(fill: rgb("eef6ff"), stroke: rgb("2f5597"), radius: 5pt, inset: 7pt)[
-    #strong[Instructions:] Read each question carefully. Choose the best answer from A, B, C, or D. Shade or circle only one answer for each question. Total: 15 marks.
+    #strong[Instructions:] #if instructions != none { instructions } else { default-instructions }
   ]
   line(length: 100%, stroke: 0.8pt + rgb("2f5597"))
 }
@@ -57,6 +58,65 @@
   )[#strong[#title]]
 }
 
+// --- Short Answer Helpers ---
+#let blank-line(width) = {
+  box(width: width, stroke: (bottom: 0.7pt), inset: (bottom: 2pt))[]
+}
+
+#let short-answer(num, body, line-width: 1.35in) = {
+  block(above: 0.9em, below: 0em, breakable: false)[
+    #strong[#num.] #body #blank-line(line-width)
+  ]
+}
+
+#let short-answer-lines(num, body, lines: 2, line-width: 100%) = {
+  block(above: 0.9em, below: 0em, breakable: false)[
+    #strong[#num.] #body
+    #for i in range(lines) {
+      v(0.6em)
+      line(length: line-width, stroke: 0.7pt)
+    }
+  ]
+}
+
+// --- True/False Helper ---
+#let tf-box() = {
+  box(width: 1.1em, height: 1.1em, stroke: 0.7pt, inset: 0pt)[#align(center + horizon)[]]
+}
+
+#let true-false(num, body) = {
+  block(above: 0.9em, below: 0em, breakable: false)[
+    #tf-box() #strong[#num.] #body
+  ]
+}
+
+// --- Matching Helper ---
+#let match-row(num, skill, answer) = {
+  block(above: 0.6em, below: 0em, breakable: false)[
+    #grid(
+      columns: (0.35in, 2fr, 3fr),
+      column-gutter: 0.15in,
+      align: (center + horizon, left, left),
+      blank-line(0.35in), [#strong[#num.] #skill], answer,
+    )
+  ]
+}
+
+#let match-table(skills, answers) = {
+  block(breakable: false)[
+    #table(
+      columns: (0.4in, 1fr, 3fr),
+      align: (center, left, left),
+      inset: 4pt,
+      stroke: rgb("999999"),
+      table.header[][*Skill*][*Answer Choices*],
+      ..for i in range(skills.len()) {
+        ([], skills.at(i), answers.at(i))
+      },
+    )
+  ]
+}
+
 #let bubble(letter, correct: false) = {
   box(
     width: 1.55em,
@@ -82,5 +142,3 @@
   ]
   v(0.8em)
 }
-
-

@@ -5,9 +5,15 @@
 #block(fill: rgb("fff8e8"), stroke: rgb("c28a00"), radius: 5pt, inset: 10pt)[
   On Saturday morning, Keisha helped her grandmother at the market in Porus. The stall was filled with callaloo, tomatoes, ripe bananas, and Scotch bonnet peppers. Keisha noticed that some customers brought reusable bags instead of plastic bags. Her grandmother smiled and said, "Small choices can help to keep Jamaica clean." By midday, Keisha had learned how to count change, greet customers politely, and pack the vegetables carefully.
 ]
+
 #question(
   1,
-)[Where did Keisha go on Saturday morning?][#choice[A][To school] #choice[B][To the market] #choice[C][To church] #choice[D][To the beach]]
+)[Where did Keisha go on Saturday morning?][
+  #choice[A][To school]
+  #choice[B][To the market]
+  #choice[C][To church]
+  #choice[D][To the beach]
+]
 
 #question(
   2,
